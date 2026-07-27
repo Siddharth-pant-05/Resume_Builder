@@ -41,7 +41,7 @@ export default function Testimonials() {
           <span className="text-xs text-slate-500">{card.handle}</span>
         </div>
       </div>
-      <p className="text-sm py-4 text-gray-800">Radiant made undercutting all of our competitors an absolute breeze.</p>
+      <p className="text-sm py-4 text-gray-800">Resume Builder made undercutting all of our competitors an absolute breeze.</p>
     </div>
   );
 
@@ -57,7 +57,7 @@ export default function Testimonials() {
         <Title title="Don't just take our words" discription="Hear what our users say about us. We're always looking for ways to improve. If you have a positive experience with us, leave a review." />
 
         {/* future testimonials to add */}
-        {/* <div className="marquee-row w-full mx-auto max-w-5xl overflow-hidden relative">
+        <div className="marquee-row w-full mx-auto max-w-5xl overflow-hidden relative">
           <div className="absolute left-0 top-0 h-full w-20 z-10 pointer-events-none bg-linear-to-r from-white to-transparent"></div>
           <div className="marquee-inner flex transform-gpu min-w-[200%] pt-10 pb-5">
             {[...cardsData, ...cardsData].map((card, index) => (
@@ -75,7 +75,7 @@ export default function Testimonials() {
             ))}
           </div>
           <div className="absolute right-0 top-0 h-full w-20 md:w-40 z-10 pointer-events-none bg-linear-to-l from-white to-transparent"></div>
-        </div> */}
+        </div> 
 
       </div>
 
