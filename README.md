@@ -238,8 +238,8 @@ Create professional resumes in minutes instead of hours.
 ## 1️⃣ Clone Repository
 
 ```bash
-git clone https://github.com/Abhishek140304/Resume-Builder
-cd Resume-Builder
+git clone https://github.com/Siddharth-pant-05/Resume_Builder
+cd Resume_Builder
 ```
 
 ---
