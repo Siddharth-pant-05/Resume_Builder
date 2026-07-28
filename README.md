@@ -21,7 +21,7 @@
 🚀 **Deployed Application**
 
 ```text
-https://resume-builder-resgen.vercel.app
+ https://resume-builder-uo7v.vercel.app/
 ```
 
 ---
