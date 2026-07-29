@@ -39,11 +39,25 @@ export async function enhanceProfessionalSummary(req, res) {
 
     }
     catch (error) {
-        return res.status(400).json({
-            success: false,
-            message: error.message
-        })
+    console.error("========== AI ERROR ==========");
+    console.error(error);
+
+    console.error("Status:", error.status);
+    console.error("Message:", error.message);
+
+    if (error.response) {
+        console.error("Response:", error.response);
     }
+
+    if (error.cause) {
+        console.error("Cause:", error.cause);
+    }
+
+    return res.status(400).json({
+        success: false,
+        message: error.message
+    });
+}
 }
 
 // enhancing resume's job description
@@ -61,6 +75,7 @@ export async function enhanceJobDescription(req, res) {
 
         const systemPrompt = 'You are an expert in resume writing. Your task is to enhance the job description of a resume. The job description should be only in 1-2 sentences also highlighting key responsibilities and achievements. Use action verbs and quantifiable results where possible. Make it ATS-friendly. Only return text and no options or anything else'
 
+        console.log("Using model:", process.env.OPEN_AI_MODEL);
         const response = await ai.chat.completions.create({
             model: process.env.OPEN_AI_MODEL,
             messages: [
@@ -84,11 +99,25 @@ export async function enhanceJobDescription(req, res) {
 
     }
     catch (error) {
-        return res.status(400).json({
-            success: false,
-            message: error.message
-        })
+    console.error("========== AI ERROR ==========");
+    console.error(error);
+
+    console.error("Status:", error.status);
+    console.error("Message:", error.message);
+
+    if (error.response) {
+        console.error("Response:", error.response);
     }
+
+    if (error.cause) {
+        console.error("Cause:", error.cause);
+    }
+
+    return res.status(400).json({
+        success: false,
+        message: error.message
+    });
+}
 }
 
 // upload resume
@@ -195,9 +224,23 @@ export async function uploadResume(req, res) {
 
     }
     catch (error) {
-        return res.status(400).json({
-            success: false,
-            message: error.message
-        })
+    console.error("========== AI ERROR ==========");
+    console.error(error);
+
+    console.error("Status:", error.status);
+    console.error("Message:", error.message);
+
+    if (error.response) {
+        console.error("Response:", error.response);
     }
+
+    if (error.cause) {
+        console.error("Cause:", error.cause);
+    }
+
+    return res.status(400).json({
+        success: false,
+        message: error.message
+    });
+}
 }
