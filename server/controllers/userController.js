@@ -201,17 +201,17 @@ export async function forgotPassword(req, res) {
 
         try {
             await transporter.sendMail({
-                from: process.env.EMAIL,
-                to: user.email,
-                subject: 'Password Reset',
-                html: `
-                <h2>Password Reset</h2>
-                <p>Click below:</p>
-                <a href="${resetUrl}">
-                    Reset Password
-                </a>
-            `
-            })
+    from: 'onboarding@resend.dev',
+    to: user.email,
+    subject: 'Password Reset',
+    html: `
+    <h2>Password Reset</h2>
+    <p>Click below:</p>
+    <a href="${resetUrl}">
+        Reset Password
+    </a>
+    `
+})
         } catch (error) {
             user.resetPasswordToken = undefined;
             user.resetPasswordExpire = undefined;
