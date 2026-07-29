@@ -90,6 +90,7 @@ export async function loginUser(req, res) {
         }
 
         const token = generateToken(user._id)
+        console.log(token)
         res.cookie('token', token, cookieOptions)
 
         user.password = undefined
